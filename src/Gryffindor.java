@@ -11,7 +11,7 @@ public class Gryffindor extends Hogwarts {
         this.bravery = bravery;
     }
 
-    public void describeStudent() {
+    public void describeGrStudent() {
         System.out.println("Студент Гриффиндора: ");
         System.out.println("Сила магии " + getMagicPower());
         System.out.println("Расстояние трансгрессии " + getTransgressionDistance());
@@ -20,14 +20,14 @@ public class Gryffindor extends Hogwarts {
         System.out.println("Храбрость: " + bravery);
     }
 
-    public void compareStudents(Gryffindor student1, Gryffindor student2) {
+    public void compareGrStudents(Gryffindor student1, Gryffindor student2) {
         int sum1 = student1.nobility + student1.honor + student1.bravery;
         int sum2 = student2.nobility + student2.honor + student2.bravery;
 
         if (sum1 > sum2) {
-            System.out.println("Первый студент лучше второго");
+            System.out.println(student1 + " лучший Гриффиндорец, чем " + student2);
         } else if (sum1 < sum2) {
-            System.out.println("Второй студент лучше первого");
+            System.out.println(student2 + " лучший Гриффиндорец, чем " + student1);
         } else {
             System.out.println("Оба студента равны");
         }
