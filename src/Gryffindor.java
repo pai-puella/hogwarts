@@ -14,7 +14,8 @@ public class Gryffindor extends Hogwarts {
         this.bravery = bravery;
     }
 
-    public void describeGrStudent() {
+    @Override
+    public void printStudentDescription() {
         System.out.println("Студент Гриффиндора: " + studentName);
         System.out.println("Сила магии " + getMagicPower());
         System.out.println("Расстояние трансгрессии " + getTransgressionDistance());
@@ -22,6 +23,7 @@ public class Gryffindor extends Hogwarts {
         System.out.println("Благородство: " + nobility);
         System.out.println("Честь: " + honor);
         System.out.println("Храбрость: " + bravery);
+        super.printStudentDescription();
     }
 
     public String getStudentName() {
