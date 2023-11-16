@@ -8,6 +8,10 @@ public class Hogwarts {
         this.transgressionDistance = transgressionDistance;
     }
 
+    public void printStudentDescription() {
+        System.out.println("Сила магии: " + magicPower);
+        System.out.println("Расстояние трансгрессии:" + transgressionDistance);
+    }
     public int getMagicPower() {
         return magicPower;
     }
