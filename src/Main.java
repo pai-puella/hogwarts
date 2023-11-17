@@ -26,21 +26,21 @@ public class Main {
         ravenclaw2.printStudentDescription();
         ravenclaw3.printStudentDescription();
 
-        gryffindor1.compareGryffindorStudents(gryffindor2, gryffindor3);
-        gryffindor2.compareGryffindorStudents(gryffindor1, gryffindor3);
-        gryffindor3.compareGryffindorStudents(gryffindor1, gryffindor2);
+        gryffindor1.compareGryffindorStudents(gryffindor2);
+        gryffindor2.compareGryffindorStudents(gryffindor3);
+        gryffindor3.compareGryffindorStudents(gryffindor1);
         System.out.println();
-        slytherin1.compareSlytherinStudents(slytherin2, slytherin3);
-        slytherin2.compareSlytherinStudents(slytherin1, slytherin3);
-        slytherin3.compareSlytherinStudents(slytherin1, slytherin2);
+        slytherin1.compareSlytherinStudents(slytherin2);
+        slytherin2.compareSlytherinStudents(slytherin3);
+        slytherin3.compareSlytherinStudents(slytherin1);
         System.out.println();
-        hufflepuff1.compareHufflepuffStudents(hufflepuff2, hufflepuff3);
-        hufflepuff2.compareHufflepuffStudents(hufflepuff1, hufflepuff3);
-        hufflepuff3.compareHufflepuffStudents(hufflepuff1, hufflepuff2);
+        hufflepuff1.compareHufflepuffStudents(hufflepuff2);
+        hufflepuff2.compareHufflepuffStudents(hufflepuff3);
+        hufflepuff3.compareHufflepuffStudents(hufflepuff1);
         System.out.println();
-        ravenclaw1.compareRavenclawStudents(ravenclaw2, ravenclaw3);
-        ravenclaw2.compareRavenclawStudents(ravenclaw1, ravenclaw3);
-        ravenclaw3.compareRavenclawStudents(ravenclaw1, ravenclaw2);
+        ravenclaw1.compareRavenclawStudents(ravenclaw2);
+        ravenclaw2.compareRavenclawStudents(ravenclaw3);
+        ravenclaw3.compareRavenclawStudents(ravenclaw1);
         System.out.println();
 
         compareStudents(gryffindor1, hufflepuff1);

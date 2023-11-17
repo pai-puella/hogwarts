@@ -1,9 +1,8 @@
 public class Gryffindor extends Hogwarts {
-    private String studentName;
-    //private int studentQuality;
-    private int nobility;
-    private int honor;
-    private int bravery;
+    private final String studentName;
+    private final int nobility;
+    private final int honor;
+    private final int bravery;
 
     public Gryffindor(String studentName, int nobility, int honor, int bravery,
                       int magicPower, int transgressionDistance) {
@@ -17,8 +16,6 @@ public class Gryffindor extends Hogwarts {
     @Override
     public void printStudentDescription() {
         System.out.println("Студент Гриффиндора: " + studentName);
-        //System.out.println("Сила магии " + getMagicPower());
-        //System.out.println("Расстояние трансгрессии " + getTransgressionDistance());
         super.printStudentDescription();
         System.out.println("Дополнительные качества факультета Гриффиндор: ");
         System.out.println("Благородство: " + nobility);
@@ -27,16 +24,16 @@ public class Gryffindor extends Hogwarts {
         System.out.println();
     }
 
-    public void compareGryffindorStudents(Gryffindor student1, Gryffindor student2) {
-        int sum1 = student1.nobility + student1.honor + student1.bravery;
-        int sum2 = student2.nobility + student2.honor + student2.bravery;
+    public void compareGryffindorStudents(Gryffindor student) {
+        int sum1 = student.nobility + student.honor + student.bravery;
+        int sum2 = this.nobility + this.honor + this.bravery;
 
         if (sum1 > sum2) {
-            System.out.println(student1.getStudentName() + " лучший Гриффиндорец, чем " + student2.getStudentName());
+            System.out.println(student.getStudentName() + " лучший Гриффиндорец, чем " + this.getStudentName());
         } else if (sum1 < sum2) {
-            System.out.println(student2.getStudentName() + " лучший Гриффиндорец, чем " + student1.getStudentName());
+            System.out.println(this.getStudentName() + " лучший Гриффиндорец, чем " + student.getStudentName());
         } else {
-            System.out.println(student1.getStudentName() + " и " + student2.getStudentName() + " в равной степени Гриффиндорцы");
+            System.out.println(student.getStudentName() + " и " + this.getStudentName() + " в равной степени Гриффиндорцы");
         }
     }
 

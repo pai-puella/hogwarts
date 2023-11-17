@@ -1,8 +1,8 @@
 
 abstract class Hogwarts {
-    private String studentName;
-    private int magicPower;
-    private int transgressionDistance;
+    private final String studentName;
+    private final int magicPower;
+    private final int transgressionDistance;
 
     public Hogwarts (String studentName, int magicPower, int transgressionDistance){
         this.studentName = studentName;

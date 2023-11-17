@@ -1,9 +1,9 @@
 public class Ravenclaw extends Hogwarts {
-    private String studentName;
-    private int intelligence;
-    private int wisdom;
-    private int wit;
-    private int creativity;
+    private final String studentName;
+    private final int intelligence;
+    private final int wisdom;
+    private final int wit;
+    private final int creativity;
 
     public Ravenclaw(String studentName,  int intelligence,
                      int wisdom, int wit, int creativity,
@@ -19,8 +19,6 @@ public class Ravenclaw extends Hogwarts {
     @Override
     public void printStudentDescription() {
         System.out.println("Студент Когтеврана: " + studentName);
-        //System.out.println("Сила магии " + getMagicPower());
-        //System.out.println("Расстояние трансгрессии " + getTransgressionDistance());
         super.printStudentDescription();
         System.out.println("Дополнительные качества факультета Когтевран:");
         System.out.println("Ум: " + intelligence);
@@ -30,16 +28,16 @@ public class Ravenclaw extends Hogwarts {
         System.out.println();
     }
 
-    public void compareRavenclawStudents(Ravenclaw student1, Ravenclaw student2) {
-        int sum1 = student1.intelligence + student1.wisdom + student1.wit + student1.creativity;
-        int sum2 = student2.intelligence + student2.wisdom + student2.wit + student2.creativity;
+    public void compareRavenclawStudents(Ravenclaw student) {
+        int sum1 = student.intelligence + student.wisdom + student.wit + student.creativity;
+        int sum2 = this.intelligence + this.wisdom + this.wit + this.creativity;
 
         if (sum1 > sum2) {
-            System.out.println(student1.getStudentName() + " лучший Когтевранец, чем " + student2.getStudentName());
+            System.out.println(student.getStudentName() + " лучший Когтевранец, чем " + this.getStudentName());
         } else if (sum1 < sum2) {
-            System.out.println(student2.getStudentName() + " лучший Когтевранец, чем " + student1.getStudentName());
+            System.out.println(this.getStudentName() + " лучший Когтевранец, чем " + student.getStudentName());
         } else {
-            System.out.println(student1.getStudentName() + " и " + student2.getStudentName() + " в равной степени Когтевранцы");
+            System.out.println(student.getStudentName() + " и " + this.getStudentName() + " в равной степени Когтевранцы");
         }
     }
 

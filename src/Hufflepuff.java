@@ -1,8 +1,8 @@
 public class Hufflepuff extends Hogwarts {
-    private String studentName;
-    private int diligence;
-    private int loyalty;
-    private int honesty;
+    private final String studentName;
+    private final int diligence;
+    private final int loyalty;
+    private final int honesty;
 
     public Hufflepuff(String studentName, int diligence, int loyalty,
                       int honesty, int magicPower, int transgressionDistance){
@@ -16,8 +16,6 @@ public class Hufflepuff extends Hogwarts {
     @Override
     public void printStudentDescription() {
         System.out.println("Студент Пуффендуя: " + studentName);
-        //System.out.println("Сила магии " + getMagicPower());
-        //System.out.println("Расстояние трансгрессии " + getTransgressionDistance());
         super.printStudentDescription();
         System.out.println("Дополнительные качества факультета Пуффендуй");
         System.out.println("Трудолюбие: " + diligence);
@@ -26,16 +24,16 @@ public class Hufflepuff extends Hogwarts {
         System.out.println();
     }
 
-    public void compareHufflepuffStudents(Hufflepuff student1, Hufflepuff student2) {
-        int sum1 = student1.diligence + student1.loyalty + student1.honesty;
-        int sum2 = student2.diligence + student2.loyalty + student2.honesty;
+    public void compareHufflepuffStudents(Hufflepuff student) {
+        int sum1 = student.diligence + student.loyalty + student.honesty;
+        int sum2 = this.diligence + this.loyalty + this.honesty;
 
         if (sum1 > sum2) {
-            System.out.println(student1.getStudentName() + " лучший Пуффендуец, чем " + student2.getStudentName());
+            System.out.println(student.getStudentName() + " лучший Пуффендуец, чем " + this.getStudentName());
         } else if (sum1 < sum2) {
-            System.out.println(student2.getStudentName() + " лучший Пуффендуец, чем " + student1.getStudentName());
+            System.out.println(this.getStudentName() + " лучший Пуффендуец, чем " + student.getStudentName());
         } else {
-            System.out.println(student1.getStudentName() + " и " + student2.getStudentName() + " в равной степени Пуффендуйцы");
+            System.out.println(student.getStudentName() + " и " + this.getStudentName() + " в равной степени Пуффендуйцы");
         }
     }
 

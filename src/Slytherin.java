@@ -1,10 +1,10 @@
 public class Slytherin extends Hogwarts {
-    private String studentName;
-    private int cunning;
+    private final String studentName;
+    private final int cunning;
     private int determination;
-    private int ambition;
-    private int resourcefulness;
-    private int lustForPower;
+    private final int ambition;
+    private final int resourcefulness;
+    private final int lustForPower;
 
     public Slytherin(String studentName, int cunning, int ambition,
                      int resourcefulness, int lustForPower,
@@ -21,8 +21,6 @@ public class Slytherin extends Hogwarts {
 
     public void printStudentDescription() {
         System.out.println("Студент Слизерина: " + studentName);
-        //System.out.println("Сила магии " + getMagicPower());
-        //System.out.println("Расстояние трансгрессии " + getTransgressionDistance());
         super.printStudentDescription();
         System.out.println("Дополнительные качества факультета Слизерин");
         System.out.println("Хитрость: " + cunning);
@@ -33,16 +31,16 @@ public class Slytherin extends Hogwarts {
         System.out.println();
     }
 
-    public void compareSlytherinStudents(Slytherin student1, Slytherin student2) {
-        int sum1 = student1.cunning + student1.determination + student1.ambition + student1.resourcefulness + student1.lustForPower;
-        int sum2 = student2.cunning + student2.determination + student2.ambition + student2.resourcefulness + student2.lustForPower;
+    public void compareSlytherinStudents(Slytherin student) {
+        int sum1 = student.cunning + student.determination + student.ambition + student.resourcefulness + student.lustForPower;
+        int sum2 = this.cunning + this.determination + this.ambition + this.resourcefulness + this.lustForPower;
 
         if (sum1 > sum2) {
-            System.out.println(student1.getStudentName() + " лучший Слизеринец, чем " + student2.getStudentName());
+            System.out.println(student.getStudentName() + " лучший Слизеринец, чем " + this.getStudentName());
         } else if (sum1 < sum2) {
-            System.out.println(student2.getStudentName() + " лучший Слизеринец, чем " + student1.getStudentName());
+            System.out.println(this.getStudentName() + " лучший Слизеринец, чем " + student.getStudentName());
         } else {
-            System.out.println(student1.getStudentName() + " и " + student2.getStudentName() + " в равной степени Слизеринцы");
+            System.out.println(student.getStudentName() + " и " + this.getStudentName() + " в равной степени Слизеринцы");
         }
     }
 
